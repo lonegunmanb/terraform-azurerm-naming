@@ -31,14 +31,14 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var fileNames = make([]string, len(files))
+	fileNames := make([]string, len(files))
 	for i, file := range files {
 		fileNames[i] = "templates/" + file.Name()
 	}
 	parsedTemplate, err := template.New("templates").Funcs(template.FuncMap{
 		// Terraform not yet support lookahead in their regex function
 		"cleanRegex": func(dirtyString string) string {
-			var re = regexp.MustCompile(`(?m)\(\?=.{\d+,\d+}\$\)|\(\?!\.\*--\)`)
+			re := regexp.MustCompile(`(?m)\(\?=.{\d+,\d+}\$\)|\(\?!\.\*--\)`)
 			return re.ReplaceAllString(dirtyString, "")
 		},
 	}).ParseFiles(fileNames...)
@@ -73,14 +73,20 @@ func main() {
 		return data[i].Name < data[j].Name
 	})
 
-	mainFile, err := os.OpenFile("main.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0644)
+	mainFile, err := os.OpenFile("main.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0o644)
 	if err != nil {
 		log.Fatal(err)
 	}
-	parsedTemplate.ExecuteTemplate(mainFile, "main", data)
-	outputsFile, err := os.OpenFile("outputs.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0644)
+	err = parsedTemplate.ExecuteTemplate(mainFile, "main", data)
 	if err != nil {
 		log.Fatal(err)
 	}
-	parsedTemplate.ExecuteTemplate(outputsFile, "outputs", data)
+	outputsFile, err := os.OpenFile("outputs.tf", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0o644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = parsedTemplate.ExecuteTemplate(outputsFile, "outputs", data)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

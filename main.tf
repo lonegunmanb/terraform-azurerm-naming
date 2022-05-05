@@ -24,7 +24,7 @@ resource "random_string" "first_letter" {
 
 
 locals {
-  // adding a first letter to guarantee that you always start with a letter
+  # adding a first letter to guarantee that you always start with a letter
   random_safe_generation = join("", [random_string.first_letter.result, random_string.main.result])
   random                 = substr(coalesce(var.unique-seed, local.random_safe_generation), 0, var.unique-length)
   prefix                 = join("-", var.prefix)
@@ -33,8 +33,8 @@ locals {
   suffix_unique          = join("-", concat(var.suffix, [local.random]))
   suffix_safe            = lower(join("", var.suffix))
   suffix_unique_safe     = lower(join("", concat(var.suffix, [local.random])))
-  // Names based in the recomendations of
-  // https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
+  # Names based in the recomendations of
+  # https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
   az = {
     analysis_services_server = {
       name        = substr(join("", compact([local.prefix_safe, "as", local.suffix_safe])), 0, 63)
@@ -2919,6 +2919,10 @@ locals {
     public_ip_prefix = {
       valid_name        = length(regexall(local.az.public_ip_prefix.regex, local.az.public_ip_prefix.name)) > 0 && length(local.az.public_ip_prefix.name) > local.az.public_ip_prefix.min_length
       valid_name_unique = length(regexall(local.az.public_ip_prefix.regex, local.az.public_ip_prefix.name_unique)) > 0
+    }
+    recovery_services_vault = {
+      valid_name        = length(regexall(local.az.recovery_services_vault.regex, local.az.recovery_services_vault.name)) > 0 && length(local.az.recovery_services_vault.name) > local.az.recovery_services_vault.min_length
+      valid_name_unique = length(regexall(local.az.recovery_services_vault.regex, local.az.recovery_services_vault.name_unique)) > 0
     }
     redis_cache = {
       valid_name        = length(regexall(local.az.redis_cache.regex, local.az.redis_cache.name)) > 0 && length(local.az.redis_cache.name) > local.az.redis_cache.min_length
