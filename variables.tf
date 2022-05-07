@@ -5,7 +5,7 @@ variable "prefix" {
 }
 
 variable "suffix" {
-  type        = list(string)
+  type       = list(string)
   default     = []
   description = "It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible"
 }
