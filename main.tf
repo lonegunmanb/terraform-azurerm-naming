@@ -1937,10 +1937,10 @@ locals {
       regex       = "^[a-z0-9][a-z0-9-]+[a-z0-9]$"
     }
     storage_account = {
-      name        = substr(join("", compact([local.prefix_safe, "st", local.suffix_safe])), 0, 24)
-      name_unique = substr(join("", compact([local.prefix_safe, "st", local.suffix_unique_safe])), 0, 24)
+      name        = substr(join("", compact([local.prefix_safe, "s_t", local.suffix_safe])), 0, 24)
+      name_unique = substr(join("", compact([local.prefix_safe, "s_t", local.suffix_unique_safe])), 0, 24)
       dashes      = false
-      slug        = "st"
+      slug        = "s_t"
       min_length  = 3
       max_length  = 24
       scope       = "global"
