@@ -107,6 +107,7 @@ No modules.
 
 | Name                                                                                                                | Type     |
 |---------------------------------------------------------------------------------------------------------------------|----------|
+| [random_pet.surprise](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet)           | resource |
 | [random_string.first_letter](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [random_string.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)         | resource |
 
