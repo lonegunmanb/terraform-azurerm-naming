@@ -18,6 +18,5 @@ func TestExampleUpgrade(t *testing.T) {
 	}
 	test_helper.ModuleUpgradeTest(t, "lonegunmanb", "terraform-azurerm-naming", "examples/complete", currentRoot, terraform.Options{
 		Upgrade: true,
-		//VarFiles: []string{fmt.Sprintf("%s/examples/complete/fixtures.us-east.auto.tfvars", currentRoot)},
 	}, currentMajorVersion)
 }
