@@ -10,7 +10,7 @@ example for `azurerm_resource_group` you can use :
 
 ```tf
 module "naming" {
-  source = "Azure/naming/azurerm"
+  source  = "Azure/naming/azurerm"
   suffix = ["test"]
 }
 resource "azurerm_resource_group" "example" {
