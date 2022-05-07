@@ -12,14 +12,23 @@ on:
 
 jobs:
   acc-tests:
-    runs-on: [self-hosted,tfmodule]
+    runs-on: ubuntu-latest
     environment:
       name: acctests
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.17.0'
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.1.9
+      - name: make tools
+        run: |
+          make tools
       - name: e2e test
         run: |
-          PATH=$PATH:/go/bin:/usr/local/go/bin make e2e-test
+          make e2e-test
       - name: version upgrade test
         run: |
-          PATH=$PATH:/go/bin:/usr/local/go/bin make version-upgrade-test
+          make version-upgrade-test
