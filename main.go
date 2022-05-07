@@ -18,7 +18,7 @@ type Resource struct {
 	Scope  *string `json:"scope,omitempty"`
 	Slug   *string `json:"slug,omitempty"`
 	Dashes bool    `json:"dashes"`
-}
+ }
 
 // Length allowed for that resorce
 type Length struct {
