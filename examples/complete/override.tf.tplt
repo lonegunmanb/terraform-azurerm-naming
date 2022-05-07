@@ -1,0 +1,15 @@
+module "name_empty" {
+  source = "{{env "MODULE_SOURCE" |  default "../../"}}"
+}
+
+module "suffix" {
+  source = "{{env "MODULE_SOURCE" |  default "../../"}}"
+}
+
+module "random" {
+  source = "{{env "MODULE_SOURCE" |  default "../../"}}"
+}
+
+module "everything" {
+  source = "{{env "MODULE_SOURCE" |  default "../../"}}"
+}

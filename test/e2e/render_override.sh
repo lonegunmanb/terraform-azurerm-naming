@@ -1,0 +1,1 @@
+sprig-cli -tmpl ../../examples/complete/override.tf.tplt > ../../examples/complete/override.tf

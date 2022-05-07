@@ -1,24 +1,24 @@
 # Example 1
 module "name_empty" {
-  source = "../"
+  source = "../.."
 }
 
 # Example 2
 module "suffix" {
-  source        = "../"
+  source        = "../.."
   suffix        = ["su", "fix"]
   unique-length = 20
 }
 
 # Example 3
 module "random" {
-  source      = "../"
+  source      = "../.."
   unique-seed = module.suffix.unique-seed
 }
 
 # Example 4
 module "everything" {
-  source                 = "../"
+  source                 = "../.."
   prefix                 = ["pre", "fix"]
   suffix                 = ["su", "fix"]
   unique-seed            = "random"
