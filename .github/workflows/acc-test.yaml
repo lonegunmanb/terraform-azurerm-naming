@@ -8,6 +8,7 @@ on:
       - '**.tf'
       - '.github/workflows/**'
       - '**.md'
+      - '**.json'
 
 jobs:
   acc-tests:
