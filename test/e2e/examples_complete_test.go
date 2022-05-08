@@ -10,7 +10,9 @@ import (
 
 func TestExamplesComplete(t *testing.T) {
 	test_helper.RunE2ETest(t, "../../", "examples/complete", terraform.Options{
-		Upgrade: true,
+		Upgrade:  true,
+		NoColor:  true,
+		NoStderr: true,
 	}, func(t *testing.T, output test_helper.TerraformOutput) {
 		assertOutputRegexp(t, output, "name_empty", "^st.+")
 		assertOutputRegexp(t, output, "suffix", "^stsufix.+")
