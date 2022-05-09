@@ -239,6 +239,7 @@ No modules.
 | <a name="output_kusto_eventhub_data_connection"></a> [kusto\_eventhub\_data\_connection](#output\_kusto\_eventhub\_data\_connection)                                                                     | n/a         |
 | <a name="output_lb"></a> [lb](#output\_lb)                                                                                                                                                               | n/a         |
 | <a name="output_lb_nat_rule"></a> [lb\_nat\_rule](#output\_lb\_nat\_rule)                                                                                                                                | n/a         |
+| <a name="output_linux_function_app"></a> [linux\_function\_app](#output\_linux\_function\_app)                                                                                                           | n/a         |
 | <a name="output_linux_virtual_machine"></a> [linux\_virtual\_machine](#output\_linux\_virtual\_machine)                                                                                                  | n/a         |
 | <a name="output_linux_virtual_machine_scale_set"></a> [linux\_virtual\_machine\_scale\_set](#output\_linux\_virtual\_machine\_scale\_set)                                                                | n/a         |
 | <a name="output_local_network_gateway"></a> [local\_network\_gateway](#output\_local\_network\_gateway)                                                                                                  | n/a         |
@@ -347,6 +348,7 @@ No modules.
 | <a name="output_virtual_network_gateway"></a> [virtual\_network\_gateway](#output\_virtual\_network\_gateway)                                                                                            | n/a         |
 | <a name="output_virtual_network_peering"></a> [virtual\_network\_peering](#output\_virtual\_network\_peering)                                                                                            | n/a         |
 | <a name="output_virtual_wan"></a> [virtual\_wan](#output\_virtual\_wan)                                                                                                                                  | n/a         |
+| <a name="output_windows_function_app"></a> [windows\_function\_app](#output\_windows\_function\_app)                                                                                                     | n/a         |
 | <a name="output_windows_virtual_machine"></a> [windows\_virtual\_machine](#output\_windows\_virtual\_machine)                                                                                            | n/a         |
 | <a name="output_windows_virtual_machine_scale_set"></a> [windows\_virtual\_machine\_scale\_set](#output\_windows\_virtual\_machine\_scale\_set)                                                          | n/a         |
 <!-- END_TF_DOCS -->
