@@ -3,8 +3,7 @@
     "name": "analysis_services_server",
     "length": {
       "min": 3,
-      "max": 63
-    },
+      "max": 63},
     "regex": "^(?=.{3,63}$)[a-z][a-z0-9]+$",
     "scope": "resourceGroup",
     "slug": "as",
