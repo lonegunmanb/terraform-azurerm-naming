@@ -1789,7 +1789,7 @@
     },
     "regex": "^(?=.{3,24}$)[a-z0-9]+$",
     "scope": "global",
-    "slug": "st",
+    "slug": "s_t",
     "dashes": false
   },
   {
