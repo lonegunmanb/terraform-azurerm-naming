@@ -119,6 +119,7 @@ No modules.
 | <a name="input_unique-include-numbers"></a> [unique-include-numbers](#input\_unique-include-numbers) | If you want to include numbers in the unique generation                                                         | `bool`         | `true`  |    no    |
 | <a name="input_unique-length"></a> [unique-length](#input\_unique-length)                            | Max length of the uniqueness suffix to be added                                                                 | `number`       | `4`     |    no    |
 | <a name="input_unique-seed"></a> [unique-seed](#input\_unique-seed)                                  | Custom value for the random characters to be used                                                               | `string`       | `""`    |    no    |
+| <a name="input_unused_variable"></a> [unused\_variable](#input\_unused\_variable)                    | It's an unused variable.                                                                                        | `string`       | `null`  |    no    |
 
 ## Outputs
 

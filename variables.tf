@@ -1,3 +1,9 @@
+variable "unused_variable" {
+  type        = string
+  default     = null
+  description = "It's an unused variable."
+}
+
 variable "prefix" {
   type        = list(string)
   default     = []
